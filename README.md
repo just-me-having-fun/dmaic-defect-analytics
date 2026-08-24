@@ -10,13 +10,13 @@ Built alongside my **Lean Six Sigma training** (White Belt certified, Yellow Bel
 
 | Phase | Tools | Status |
 |---|---|---|
-| **Define** | Project charter, SIPOC, VOC→CTQ tree | ⏳ |
+| **Define** | Project charter + SIPOC (`docs/project_charter.md`) | ✅ |
 | **Measure** | Synthetic process/defect data generator, Pareto analysis of defect types | ✅ |
-| **Analyze** | X̄-R control charts (Shewhart), out-of-control detection | ✅ |
+| **Analyze** | X̄-R control charts (Shewhart), F-test & Welch t-test, fishbone diagram | ✅ |
 | **Improve** | Variance-reduction scenario; DOE notebook planned | 🟡 |
-| **Control** | Process capability (Cp/Cpk) before vs after the change | ✅ |
+| **Control** | Process capability (Cp/Cpk) before vs after; DPMO → sigma level | ✅ |
 
-Run it: `pip install -r requirements.txt && python demo_dmaic.py` (writes Pareto + X-bar charts to `outputs/`).
+Run it: `pip install -r requirements.txt` then `python demo_dmaic.py` and `python demo_analyze.py` (writes Pareto, X-bar and fishbone charts to `outputs/`).
 
 ## Dataset
 
@@ -30,14 +30,16 @@ Fully **synthetic** solder-paste assembly process (thickness subgroups + defect 
 ## Roadmap
 
 - [x] Repo scaffold + README
-- [ ] Define-phase charter + SIPOC
+- [x] Define-phase charter + SIPOC
 - [x] Synthetic process/defect data generator
 - [x] Pareto analysis (Measure)
 - [x] X̄-R SPC control charts (Analyze)
+- [x] Hypothesis tests: F-test (variance), Welch t-test (mean)
+- [x] Fishbone root-cause diagram
 - [x] Cp/Cpk capability study, before vs after (Improve/Control)
-- [ ] Hypothesis tests / regression on process parameters
+- [x] DPMO → sigma level (3.17σ → 3.5σ in the demo)
 - [ ] DOE notebook
-- [ ] Final writeup with before/after sigma level
+- [ ] Final writeup
 
 ---
 
